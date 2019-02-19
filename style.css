@@ -1,0 +1,135 @@
+/* Global */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Logo */
+
+.logo {
+    color: white;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+/* Main background */
+
+.main-background {
+    /* background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 30%, transparent), url("IMG-2.jpg"); */
+    background: rgb(0,183,79);
+    height: 100vh;
+    background-size: cover;
+}
+
+/* Main navigation */
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav--menu {
+    list-style-type: none; 
+    display: flex;
+    align-items: flex-start;
+    padding-top: 25px;
+    height: 200px;
+}
+
+.main-nav--left-part {
+    display: flex;
+}
+
+/* Dropdown nav menu items */
+
+@keyframes appear-to-bottom {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.main-nav--menu li {
+    color: black;
+    font-size: 1rem;
+}
+
+.main-nav--menu li a {
+    color: white;
+    font-size: 1.5rem;
+    padding: 8px;
+}
+
+.main-nav--menu li a:hover,
+.main-nav--menu li a:hover,
+.main-nav__dropdown-menu:hover + a {
+    background: #20c063;
+    border-radius: 5px;
+}
+
+#menu-item--info:hover .main-nav__dropdown-menu,
+#menu-item--details:hover .main-nav__dropdown-menu {
+    position: absolute;
+    display: block;
+    margin-top: 35px;
+}
+
+.dropdown-item__divided {
+    border-top: 1px solid #E8E9EA;
+}
+
+.main-nav__dropdown-menu {
+    display: none;
+    list-style-type: none;
+    background: white;
+    margin-top: 8px;
+    animation: appear-to-bottom ease 0.5s backwards;
+    border-radius: 5px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.main-nav__dropdown-menu li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.main-nav__dropdown-menu li:hover {
+    background-color: gainsboro;
+}
+
+/* Slogan */
+
+.slogan-container {
+    font-family: 'Russo One', sans-serif;
+	color: white;
+	height:50%;
+	width:50%;
+    margin: auto;
+}
+
+.slogan--phrase-begin {
+	font-size: 3rem;
+    margin: auto;
+}
+
+.slogan--brand {
+	font-size: 5rem;
+    margin: auto;
+}
+
+
