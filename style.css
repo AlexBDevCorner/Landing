@@ -140,14 +140,13 @@ button:focus
 /* Register button */
 
 .register-button {
+    box-sizing: content-box;
     width: 70%;
     height: 5rem;
     font-family: 'Russo One', sans-serif;
     font-size: 3rem;
     background: #ff2400;
     border: none;
-    border-left: 3px solid rgba(202, 0, 42, 0.8);
-    border-right: 3px solid rgba(202, 0, 42, 0.8);
     border-radius: 5px;
     color: #fff;
     display: block;
@@ -157,12 +156,25 @@ button:focus
     border-bottom: 10px solid rgba(202, 0, 42, 0.8);
   }
 
-.register-button:active
-{
+.register-button:active {
     transform: translate(0px,5px);
     -webkit-transform: translate(0px,5px);
     border-bottom: 1px solid rgba(202, 0, 42, 0.8);
-    border-left: 1px solid rgba(202, 0, 42, 0.8);
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.ball-image {
+    position: absolute;
+    display: block;
+    height: 30%;
+    margin-bottom: 1rem;
+    bottom: 1rem;
+    -webkit-animation:spin 1.5s linear infinite;
+    -moz-animation:spin 1.5s linear infinite;
+    animation:spin 1.5s linear infinite;
 }
 
 
