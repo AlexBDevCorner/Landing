@@ -118,7 +118,6 @@ button:focus
 .slogan-container {
     font-family: 'Russo One', sans-serif;
 	color: white;
-	height: 50%;
 	width: 60%;
     margin: auto;
     display: flex;
@@ -162,19 +161,26 @@ button:focus
     border-bottom: 1px solid rgba(202, 0, 42, 0.8);
 }
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@keyframes move-ball {
+    from {
+        top: 0%;
+    }
+    to {
+        top: 60%;
+    }
+}
 
 .ball-image {
     position: absolute;
     display: block;
+    width: auto;
     height: 30%;
+    left: 10%;
+    top: 60%;
     margin-bottom: 1rem;
-    bottom: 1rem;
-    -webkit-animation:spin 1.5s linear infinite;
-    -moz-animation:spin 1.5s linear infinite;
-    animation:spin 1.5s linear infinite;
+    -webkit-animation: move-ball 1s cubic-bezier(0.82, 0.32, 1, 1);
+    -moz-animation: move-ball 1s cubic-bezier(0.82, 0.32, 1, 1);
+    animation: move-ball 1s cubic-bezier(0.82, 0.32, 1, 1);
 }
 
 
