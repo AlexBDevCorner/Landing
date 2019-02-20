@@ -6,7 +6,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Russo One', sans-serif;
 }
 
 ul {
@@ -69,22 +69,22 @@ button:focus
 
 .main-nav--menu li a {
     color: white;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     padding: 8px;
 }
 
 .main-nav--menu li a:hover,
 .main-nav--menu li a:hover,
 .main-nav__dropdown-menu:hover + a {
-    background: #20c063;
-    border-radius: 5px;
+    background: #ff2400;
+    border-radius: 10px;
 }
 
 #menu-item--info:hover .main-nav__dropdown-menu,
 #menu-item--details:hover .main-nav__dropdown-menu {
     position: absolute;
     display: block;
-    margin-top: 35px;
+    margin-top: 55px;
 }
 
 .dropdown-item__divided {
