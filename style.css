@@ -6,12 +6,17 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Russo One', sans-serif;
 }
 
 ul {
     padding: 0;
     margin: 0;
+}
+
+button:focus
+{
+    outline:0;
 }
 
 /* Logo */
@@ -64,22 +69,22 @@ ul {
 
 .main-nav--menu li a {
     color: white;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     padding: 8px;
 }
 
 .main-nav--menu li a:hover,
 .main-nav--menu li a:hover,
 .main-nav__dropdown-menu:hover + a {
-    background: #20c063;
-    border-radius: 5px;
+    background: #ff2400;
+    border-radius: 10px;
 }
 
 #menu-item--info:hover .main-nav__dropdown-menu,
 #menu-item--details:hover .main-nav__dropdown-menu {
     position: absolute;
     display: block;
-    margin-top: 35px;
+    margin-top: 55px;
 }
 
 .dropdown-item__divided {
@@ -113,7 +118,6 @@ ul {
 .slogan-container {
     font-family: 'Russo One', sans-serif;
 	color: white;
-	height: 50%;
 	width: 60%;
     margin: auto;
     display: flex;
@@ -132,63 +136,51 @@ ul {
     box-sizing: content-box;
 }
 
-@-moz-keyframes ctabutton {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@-webkit-keyframes ctabutton {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@-o-keyframes ctabutton {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@keyframes ctabutton {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+/* Register button */
 
 .register-button {
+    box-sizing: content-box;
     width: 70%;
-    height: 4rem;
-    border-radius: 50px;
-    color: white;
+    height: 5rem;
     font-family: 'Russo One', sans-serif;
     font-size: 3rem;
+    background: #ff2400;
     border: none;
-    background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
-    background-size: 600%;
-    animation: ctabutton 16s linear infinite;
-    
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    position: relative;
+    cursor:pointer;
+    border-bottom: 10px solid rgba(202, 0, 42, 0.8);
+  }
+
+.register-button:active {
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid rgba(202, 0, 42, 0.8);
+}
+
+@keyframes move-ball {
+    from {
+        top: 0%;
+    }
+    to {
+        top: 60%;
+    }
+}
+
+.ball-image {
+    position: absolute;
+    display: block;
+    width: auto;
+    height: 30%;
+    left: 10%;
+    top: 60%;
+    margin-bottom: 1rem;
+    -webkit-animation: move-ball 1s cubic-bezier(0.82, 0.32, 1, 1);
+    -moz-animation: move-ball 1s cubic-bezier(0.82, 0.32, 1, 1);
+    animation: move-ball 1s cubic-bezier(0.82, 0.32, 1, 1);
 }
 
 
